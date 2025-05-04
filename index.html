@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz de conhecimentos gerais</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="titulo" id="titulo">
+    <h1>Quiz de conhecimentos gerais</h1>
+  </div>
+
+  <button class="comecar" id="comecar" onclick="comecar()">COMEÇAR</button>
+
+  <!-- PERGUNTA 1 -->
+  <h3 class="pergunta1" id="pergunta1" style="display: none;">Qual dos itens abaixo é um filo, segundo a taxonomia?</h3>
+  <div class="taxonomiacontainer">
+    <img class="taxonomia" id="taxonomia" style="display: none;" src="taxonomia.webp" alt="taxonomia">
+  </div>
+  <div class="opcoes1" id="opcoes1" style="display: none;">
+    <label><input type="radio" name="resposta1" value="eukarya" /> Eukarya</label><br />
+    <label><input type="radio" name="resposta1" value="animalia" /> Animalia</label><br />
+    <label><input type="radio" name="resposta1" value="cnidaria" /> Cnidaria</label><br />
+    <label><input type="radio" name="resposta1" value="anfibia" /> Anfibia</label><br />
+  </div>
+  <button id="conferir1" class="conferir1" style="display: none;" onclick="conferir1()">CONFERIR</button>
+  <h2 class="correto1" id="correto1" style="display: none;">CORRETO!</h2>
+  <h2 class="errado1" id="errado1" style="display: none;">ERRADO!</h2>
+  <h3 class="respostacerta1" id="respostacerta1" style="display: none;">RESPOSTA CORRETA: CNIDARIA</h3>
+  <button class="proxima2" id="proxima2" onclick="proxima2()" style="display: none;">PRÓXIMA PERGUNTA</button>
+
+  <!-- PERGUNTA 2 -->
+  <h3 class="pergunta2" id="pergunta2" style="display: none;">Qual das marcas de carro abaixo é japonesa?</h3>
+  <div class="hondacontainer">
+    <img class="honda" id="honda" style="display: none;" src="honda.webp" alt="taxonomia">
+  </div>
+  <div class="opcoes2" id="opcoes2" style="display: none;">
+    <label><input type="radio" name="resposta2" value="honda" /> Honda</label><br />
+    <label><input type="radio" name="resposta2" value="mercedes" /> Mercedes</label><br />
+    <label><input type="radio" name="resposta2" value="ferrari" /> Ferrari</label><br />
+    <label><input type="radio" name="resposta2" value="renault" /> Renault</label><br />
+  </div>
+  <button id="conferir2" class="conferir2" onclick="conferir2()" style="display: none;">CONFERIR</button>
+  <h2 class="correto2" id="correto2" style="display: none;">CORRETO!</h2>
+  <h2 class="errado2" id="errado2" style="display: none;">ERRADO!</h2>
+  <h3 class="respostacerta2" id="respostacerta2" style="display: none;">RESPOSTA CORRETA: HONDA</h3>
+  <button class="proxima3" id="proxima3" onclick="proxima3()" style="display: none;">PRÓXIMA PERGUNTA</button>
+
+  <!-- PERGUNTA 3 -->
+  <h3 class="pergunta3" id="pergunta3" style="display: none;">De que país é essa bandeira?</h3>
+  <div class="bandeiracontainer">
+    <img class="bandeira" id="bandeira" style="display: none;" src="bandeiradajamaica.svg" alt="bandeira da jamaica">
+  </div>
+  <div class="opcoes3" id="opcoes3" style="display: none;">
+    <label><input type="radio" name="resposta3" value="africadosul" /> África do Sul</label><br />
+    <label><input type="radio" name="resposta3" value="croacia" /> Croácia</label><br />
+    <label><input type="radio" name="resposta3" value="jamaica" /> Jamaica</label><br />
+    <label><input type="radio" name="resposta3" value="afeganistao" /> Afeganistão</label><br />
+  </div>
+  <button id="conferir3" class="conferir3" onclick="conferir3()" style="display: none;">CONFERIR</button>
+  <h2 class="correto3" id="correto3" style="display: none;">CORRETO!</h2>
+  <h2 class="errado3" id="errado3" style="display: none;">ERRADO!</h2>
+  <h3 class="respostacerta3" id="respostacerta3" style="display: none;">RESPOSTA CORRETA: JAMAICA</h3>
+  <button class="proxima4" id="proxima4" style="display: none;" onclick="proxima4()">PRÓXIMA PERGUNTA</button>
+
+  <!-- PERGUNTA 4 -->
+  <h3 class="pergunta4" id="pergunta4" style="display: none;">Em que período da história europeia surgiram os burgos?
+  </h3>
+  <div class="burgoscontainer">
+    <img class="burgos" id="burgos" style="display: none;" src="burgos.jpg" alt="burgos">
+  </div>
+  <div class="opcoes4" id="opcoes4" style="display: none;">
+    <label><input type="radio" name="resposta4" value="altaidademedia" /> Alta Idade Média</label><br />
+    <label><input type="radio" name="resposta4" value="idademoderna" /> Idade Moderna</label><br />
+    <label><input type="radio" name="resposta4" value="idadeantiga" /> Idade Antiga</label><br />
+    <label><input type="radio" name="resposta4" value="baixaidademedia" /> Baixa Idade Média</label><br />
+  </div>
+  <button id="conferir4" class="conferir4" onclick="conferir4()" style="display: none;">CONFERIR</button>
+  <h2 class="correto4" id="correto4" style="display: none;">CORRETO!</h2>
+  <h2 class="errado4" id="errado4" style="display: none;">ERRADO!</h2>
+  <h3 class="respostacerta4" id="respostacerta4" style="display: none;">RESPOSTA CORRETA: BAIXA IDADE MÉDIA</h3>
+  <button class="proxima5" id="proxima5" style="display: none;" onclick="proxima5()">PRÓXIMA PERGUNTA</button>
+
+  <!-- PERGUNTA 5 -->
+  <h3 class="pergunta5" id="pergunta5" style="display: none;">Quantas unidades federativas o Brasil possui?</h3>
+  <div class="unidadesfederativascontainer">
+    <img class="unidadesfederativas" id="unidadesfederativas" style="display: none;" src="unidadesfederativas.svg"
+      alt="unidades federativas">
+  </div>
+  <div class="opcoes5" id="opcoes5" style="display: none;">
+    <label><input type="radio" name="resposta5" value="26" /> 26</label><br />
+    <label><input type="radio" name="resposta5" value="27" /> 27</label><br />
+    <label><input type="radio" name="resposta5" value="25" /> 25</label><br />
+    <label><input type="radio" name="resposta5" value="24" /> 24</label><br />
+  </div>
+  <button id="conferir5" class="conferir5" onclick="conferir5()" style="display: none;">CONFERIR</button>
+  <h2 class="correto5" id="correto5" style="display: none;">CORRETO!</h2>
+  <h2 class="errado5" id="errado5" style="display: none;">ERRADO!</h2>
+  <h3 class="respostacerta5" id="respostacerta5" style="display: none;">RESPOSTA CORRETA: 27</h3>
+  <button class="proxima6" id="proxima6" style="display: none;" onclick="proxima6()">PRÓXIMA PERGUNTA</button>
+
+  <!-- PERGUNTA 6 -->
+  <h3 class="pergunta6" id="pergunta6" style="display: none;">Quantos países existem na América do Sul?</h3>
+  <div class="americadosulcontainer">
+    <img class="americadosul" id="americadosul" style="display: none;" src="americadosul.webp" alt="america do sul">
+  </div>
+  <div class="opcoes6" id="opcoes6" style="display: none;">
+    <label><input type="radio" name="resposta6" value="15" /> 15</label><br />
+    <label><input type="radio" name="resposta6" value="18" /> 18</label><br />
+    <label><input type="radio" name="resposta6" value="13" /> 13</label><br />
+    <label><input type="radio" name="resposta6" value="11" /> 11</label><br />
+  </div>
+  <button id="conferir6" class="conferir6" onclick="conferir6()" style="display: none;">CONFERIR</button>
+  <h2 class="correto6" id="correto6" style="display: none;">CORRETO!</h2>
+  <h2 class="errado6" id="errado6" style="display: none;">ERRADO!</h2>
+  <h3 class="respostacerta6" id="respostacerta6" style="display: none;">RESPOSTA CORRETA: 13</h3>
+  <button class="proxima7" id="proxima7" style="display: none;" onclick="proxima7()">PRÓXIMA PERGUNTA</button>
+
+  <!-- PERGUNTA 7 -->
+  <h3 class="pergunta7" id="pergunta7" style="display: none;">Como se chamava o irmão mais velho de Rony Weasley, na
+    saga de Harry Potter?</h3>
+  <div class="guicontainer">
+    <img class="gui" id="gui" style="display: none;" src="gui.jpg" alt="gui weasley">
+  </div>
+  <div class="opcoes7" id="opcoes7" style="display: none;">
+    <label><input type="radio" name="resposta7" value="gui" /> Gui Weasley</label><br />
+    <label><input type="radio" name="resposta7" value="carlinhos" /> Carlinhos Weasley</label><br />
+    <label><input type="radio" name="resposta7" value="percy" /> Percy Weasley</label><br />
+    <label><input type="radio" name="resposta7" value="fredejorge" /> Fred e Jorge Weasley</label><br />
+  </div>
+  <button id="conferir7" class="conferir7" onclick="conferir7()" style="display: none;">CONFERIR</button>
+  <h2 class="correto7" id="correto7" style="display: none;">CORRETO!</h2>
+  <h2 class="errado7" id="errado7" style="display: none;">ERRADO!</h2>
+  <h3 class="respostacerta7" id="respostacerta7" style="display: none;">RESPOSTA CORRETA: GUI WEASLEY</h3>
+  <button class="proxima8" id="proxima8" style="display: none;" onclick="proxima8()">PRÓXIMA PERGUNTA</button>
+
+  <!-- PERGUNTA 8 -->
+  <h3 class="pergunta8" id="pergunta8" style="display: none;">Que raça de cachorro é essa?</h3>
+  <div class="bordercolliecontainer">
+    <img class="bordercollie" id="bordercollie" style="display: none;" src="bordercollie.webp">
+  </div>
+  <div class="opcoes8" id="opcoes8" style="display: none;">
+    <label><input type="radio" name="resposta8" value="pastoralemao" /> Pastor Alemão</label><br />
+    <label><input type="radio" name="resposta8" value="bordercollie" /> Border Collie</label><br />
+    <label><input type="radio" name="resposta8" value="poodle" /> Poodle</label><br />
+    <label><input type="radio" name="resposta8" value="pastoraustraliano" /> Pastor Australiano</label><br />
+  </div>
+  <button id="conferir8" class="conferir8" onclick="conferir8()" style="display: none;">CONFERIR</button>
+  <h2 class="correto8" id="correto8" style="display: none;">CORRETO!</h2>
+  <h2 class="errado8" id="errado8" style="display: none;">ERRADO!</h2>
+  <h3 class="respostacerta8" id="respostacerta8" style="display: none;">RESPOSTA CORRETA: BORDER COLLIE</h3>
+  <button class="proxima9" id="proxima9" style="display: none;" onclick="proxima9()">PRÓXIMA PERGUNTA</button>
+
+  <!-- PERGUNTA 9 -->
+  <h3 class="pergunta9" id="pergunta9" style="display: none;">Qual era o nome do filósofo que criou o conceito
+    "modernidade líquida"?</h3>
+  <div class="zygmuntbaumancontainer">
+    <img class="zygmuntbauman" id="zygmuntbauman" style="display: none;" src="zygmuntbauman.png">
+  </div>
+  <div class="opcoes9" id="opcoes9" style="display: none;">
+    <label><input type="radio" name="resposta9" value="zygmuntbauman" /> Zygmunt Bauman</label><br />
+    <label><input type="radio" name="resposta9" value="stefanazweig" /> Stefan Zweig</label><br />
+    <label><input type="radio" name="resposta9" value="michelfocault" /> Michel Focault</label><br />
+    <label><input type="radio" name="resposta9" value="hansjonas" /> Hans Jonas</label><br />
+  </div>
+  <button id="conferir9" class="conferir9" onclick="conferir9()" style="display: none;">CONFERIR</button>
+  <h2 class="correto9" id="correto9" style="display: none;">CORRETO!</h2>
+  <h2 class="errado9" id="errado9" style="display: none;">ERRADO!</h2>
+  <h3 class="respostacerta9" id="respostacerta9" style="display: none;">RESPOSTA CORRETA: ZYGMUNT BAUMAN</h3>
+  <button class="proxima10" id="proxima10" style="display: none;" onclick="proxima10()">PRÓXIMA PERGUNTA</button>
+
+  <!-- PERGUNTA 10 -->
+  <h3 class="pergunta10" id="pergunta10" style="display: none;">Qual é o nome do atual piloto de F1 brasileiro?</h3>
+  <div class="bortoletocontainer">
+    <img class="bortoleto" id="bortoleto" style="display: none;" src="bortoleto.webp">
+  </div>
+  <div class="opcoes10" id="opcoes10" style="display: none;">
+    <label><input type="radio" name="resposta10" value="massa" /> Felipe Massa</label><br />
+    <label><input type="radio" name="resposta10" value="alonso" /> Fernando Alonso</label><br />
+    <label><input type="radio" name="resposta10" value="senna" /> Ayrton Senna</label><br />
+    <label><input type="radio" name="resposta10" value="bortoleto" /> Gabriel Bortoleto</label><br />
+  </div>
+  <button id="conferir10" class="conferir10" onclick="conferir10()" style="display: none;">CONFERIR</button>
+  <h2 class="correto10" id="correto10" style="display: none;">CORRETO!</h2>
+  <h2 class="errado10" id="errado10" style="display: none;">ERRADO!</h2>
+  <h3 class="respostacerta10" id="respostacerta10" style="display: none;">RESPOSTA CORRETA: GABRIEL BORTOLETO</h3>
+  <button class="verresultados" id="verresultados" style="display: none;" onclick="verResultados()">VER
+    RESULTADOS</button>
+
+  <!-- RESULTADOS -->
+  <div class="resultadoscontainer" id="resultadoscontainer" style="display: none;">
+    <h1 id="resultados" style="display: none;">RESULTADOS</h1>
+  </div>
+  <h2 class="acertos" id="acertos" style="display: none;">ACERTOS:</h2>
+  <div class="resultadoFinal" id="resultadoFinal" style="display: none;">
+    <h2>Você acertou <span id="acertosTotal"></span> de 10 perguntas!</h2>
+  </div>
+  <button class="mostrar" id="mostrar" style="display: none;" onclick="contarAcertos()">MOSTRAR QUANTIDADE DE
+    ACERTOS</button>
+  <br>
+  <div class="laamcontainer">
+    <h2 class="laam28ee" id="laam28ee" style="display: none;">&copy; Desenvolvido por laam28ee</h2>
+    <img src="laam28ee.png" alt="imagem da laam28ee" style="display: none;" id="imglaam">
+    <br id="br" style="display: none;">
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
